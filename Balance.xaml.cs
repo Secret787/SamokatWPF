@@ -16,16 +16,18 @@ using System.Windows.Shapes;
 namespace SamokatWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Balance.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Balance : Page
     {
-        public MainWindow()
+        public Balance()
         {
             InitializeComponent();
-            MainFrame.Content = new Main();
         }
 
-     
+        private void FromBalanceToMenu_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Menu());
+        }
     }
 }

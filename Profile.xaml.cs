@@ -16,16 +16,19 @@ using System.Windows.Shapes;
 namespace SamokatWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Profile.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Profile : Page
     {
-        public MainWindow()
+        public Profile()
         {
             InitializeComponent();
-            MainFrame.Content = new Main();
         }
 
-     
+        private void FromProfileToMenu_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Menu());
+
+        }
     }
 }

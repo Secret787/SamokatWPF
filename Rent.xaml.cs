@@ -16,16 +16,19 @@ using System.Windows.Shapes;
 namespace SamokatWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Rent.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Rent : Page
     {
-        public MainWindow()
+        public Rent()
         {
             InitializeComponent();
-            MainFrame.Content = new Main();
         }
 
-     
+        private void FromRentToMenu_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Menu());
+
+        }
     }
 }

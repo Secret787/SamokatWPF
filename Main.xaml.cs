@@ -16,16 +16,23 @@ using System.Windows.Shapes;
 namespace SamokatWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            MainFrame.Content = new Main();
         }
 
-     
+        private void ToSign_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Sign());
+        }
+
+        private void ToReg_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Reg());
+        }
     }
 }

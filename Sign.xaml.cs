@@ -16,16 +16,26 @@ using System.Windows.Shapes;
 namespace SamokatWPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Sign.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Sign : Page
     {
-        public MainWindow()
+        public Sign()
         {
             InitializeComponent();
-            MainFrame.Content = new Main();
         }
 
      
+        private void ToSign_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Menu());
+
+        }
+
+        private void FromSignToMain_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Main());
+
+        }
     }
 }
